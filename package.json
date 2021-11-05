@@ -18,12 +18,14 @@
   ],
   "main": "dist/index.js",
   "scripts": {
+    "build-v3": "vue-cli-service build --optimze",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules --config build/webpack.config.js",
     "demo": "cross-env NODE_ENV=production webpack --progress --hide-modules --config demo/webpack.config.js",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --hot --config demo/webpack.config.js"
   },
   "dependencies": {
-    "vue": "^2.6.10"
+    "@vue/compat": "^3.0.0",
+    "vue": "^3.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
@@ -43,6 +45,8 @@
     "@babel/polyfill": "^7.2.5",
     "@babel/preset-env": "^7.2.3",
     "@babel/runtime": "^7.2.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.2.21",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.5",
     "cross-env": "^5.1",
@@ -58,9 +62,8 @@
     "lodash": "^4.17.13",
     "mixin-deep": "^2.0.1",
     "set-value": "^2.0.1",
-    "vue-loader": "^15.0.0",
+    "vue-loader": "^16.0.0",
     "vue-style-loader": "^4.1.2",
-    "vue-template-compiler": "^2.5.7",
     "webpack": "4.28.4",
     "webpack-cli": "^3.2.1",
     "webpack-dev-server": ">=3.1.11",
