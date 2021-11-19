@@ -62,6 +62,7 @@ export default {
 
   watch: {
     deviceId: function(id) {
+      console.log("Watched DeviceID called");
       this.changeCamera(id);
     }
   },
@@ -138,6 +139,7 @@ export default {
           if (!this.camerasListEmitted) {
             if (this.selectFirstDevice && this.cameras.length > 0) {
               this.deviceId = this.cameras[0].deviceId;
+              console.log("Set DeviceID", this.deviceId);
             }
 
             this.$emit("cameras", this.cameras);
@@ -255,7 +257,7 @@ export default {
         constraints.video.height = this.resolution.height;
         constraints.video.width = this.resolution.width;
       }
-
+      console.log("loadCamera", device);
       navigator.mediaDevices
         .getUserMedia(constraints)
         .then(stream => this.loadSrcStream(stream))
