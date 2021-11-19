@@ -146,7 +146,6 @@ export default {
             console.log("Set DeviceID", this.deviceId);
             this.$emit("cameras", this.cameras);
             this.camerasListEmitted = true;
-            this.start();
           }
         })
         .catch(error => this.$emit("notsupported", error));
