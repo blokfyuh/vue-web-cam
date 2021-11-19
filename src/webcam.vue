@@ -145,6 +145,7 @@ export default {
 
             this.$emit("cameras", this.cameras);
             this.camerasListEmitted = true;
+            this.start();
           }
         })
         .catch(error => this.$emit("notsupported", error));
