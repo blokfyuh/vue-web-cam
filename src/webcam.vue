@@ -136,6 +136,7 @@ export default {
           }
         })
         .then(() => {
+          console.log("SelectedFirstDevice", this.selectFirstDevice, this.camerasListEmitted, this.cameras.length);
           if (!this.camerasListEmitted) {
             if (this.selectFirstDevice && this.cameras.length > 0) {
               this.deviceId = this.cameras[0].deviceId;
