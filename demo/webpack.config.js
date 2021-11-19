@@ -6,7 +6,7 @@ const { version } = require("../package.json");
 
 module.exports = {
   mode: "development",
-  entry: "./demo/src/main.js",
+  entry: "./demo/src/index.js",
   output: {
     path: path.resolve(__dirname, "./dist"),
     publicPath: "/",
