@@ -1,6 +1,6 @@
 var path = require("path");
 var webpack = require("webpack");
-const VueLoaderPlugin = require("vue-loader/lib/plugin");
+const { VueLoaderPlugin } = require("vue-loader");
 const { version } = require("../package.json");
 
 module.exports = {
@@ -22,6 +22,11 @@ module.exports = {
           loaders: {
             scss: "vue-style-loader!css-loader!sass-loader",
             sass: "vue-style-loader!css-loader!sass-loader?indentedSyntax"
+          },
+          compilerOptions: {
+            compatConfig: {
+              MODE: 2
+            }
           }
         }
       },
@@ -38,7 +43,7 @@ module.exports = {
   resolve: {
     extensions: [".js", ".vue"],
     alias: {
-      vue: "vue/dist/vue.esm.js"
+      vue: "@vue/compat"
     }
   },
   devServer: {
