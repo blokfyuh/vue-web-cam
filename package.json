@@ -1,5 +1,5 @@
 {
-  "name": "vue-web-cam-teazit",
+  "name": "vue-web-cam",
   "version": "1.9.0",
   "description": "Webcam component for Vuejs applications",
   "repository": {
@@ -25,7 +25,8 @@
   },
   "dependencies": {
     "@vue/compat": "^3.0.0",
-    "vue": "^3.0.0"
+    "vue": "^3.0.0",
+    "vue-web-cam": "github:blokfyuh/vue-web-cam"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
