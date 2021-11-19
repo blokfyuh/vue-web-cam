@@ -34,10 +34,10 @@ export default {
       type: Boolean,
       default: false
     },
-    deviceId: {
-      type: String,
-      default: null
-    },
+    // deviceId: {
+    //   type: String,
+    //   default: null
+    // },
     playsinline: {
       type: Boolean,
       default: true
@@ -56,7 +56,8 @@ export default {
       source: null,
       canvas: null,
       camerasListEmitted: false,
-      cameras: []
+      cameras: [],
+      deviceId: null,
     };
   },
 
