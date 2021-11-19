@@ -142,7 +142,7 @@ export default {
               console.log("Set DeviceID", this.deviceId);
               this.deviceId = this.cameras[0].deviceId;
             }
-
+            console.log("Set DeviceID", this.deviceId);
             this.$emit("cameras", this.cameras);
             this.camerasListEmitted = true;
             this.start();
