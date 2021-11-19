@@ -16,7 +16,7 @@
     "dist",
     "nuxt"
   ],
-  "main": "dist/index.js",
+  "main": "dist/app.d019b8cf.js",
   "scripts": {
     "build-v3": "vue-cli-service build --optimze",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules --config build/webpack.config.js",
