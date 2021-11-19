@@ -115,6 +115,7 @@ export default {
         navigator.mediaDevices.getUserMedia = this.legacyGetUserMediaSupport();
       }
 
+      console.log("setupMedia", navigator.mediaDevices.getUserMedia);
       this.testMediaAccess();
     },
 
@@ -127,6 +128,7 @@ export default {
         .then(deviceInfos => {
           for (let i = 0; i !== deviceInfos.length; ++i) {
             let deviceInfo = deviceInfos[i];
+            console.log("DeviceInfo", deviceInfo);
             if (deviceInfo.kind === "videoinput") {
               this.cameras.push(deviceInfo);
             }
