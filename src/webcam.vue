@@ -1,8 +1,8 @@
 <template>
-  <div>
-    <select name="cameras">
-      <option v-for="camera in cameras" :key="camera.deviceId" :value="camera.deviceId">{{ camera.label }}</option>
-    </select>
+<!--  <div>-->
+<!--    <select name="cameras">-->
+<!--      <option v-for="camera in cameras" :key="camera.deviceId" :value="camera.deviceId">{{ camera.label }}</option>-->
+<!--    </select>-->
     <video
       ref="video"
       :width="width"
@@ -11,7 +11,7 @@
       :autoplay="autoplay"
       :playsinline="playsinline"
     />
-  </div>
+<!--  </div>-->
 </template>
 
 <script>
