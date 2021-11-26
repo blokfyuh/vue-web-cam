@@ -1,7 +1,7 @@
 <template>
   <div>
     <select name="cameras">
-      <option v-for="camera in cameras" :key="camera.deviceId" :value="camera.deviceId">{{ camera.deviceId }}</option>
+      <option v-for="camera in cameras" :key="camera.deviceId" :value="camera.deviceId">{{ camera.label }}</option>
     </select>
     <video
       ref="video"
@@ -68,6 +68,7 @@ export default {
 
   watch: {
     deviceId: function(id) {
+      console.log("Watched DeviceId", id);
       this.changeCamera(id);
     }
   },
