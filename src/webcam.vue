@@ -169,6 +169,7 @@ export default {
       if ("srcObject" in this.$refs.video) {
         // new browsers api
         this.$refs.video.srcObject = stream;
+        console.log("Set srcObjects", this.$refs.video.srcObject);
       } else {
         // old broswers
         this.source = window.HTMLMediaElement.srcObject(stream);
