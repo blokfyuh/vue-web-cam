@@ -1,12 +1,17 @@
 <template>
-  <video
-    ref="video"
-    :width="width"
-    :height="height"
-    :src="source"
-    :autoplay="autoplay"
-    :playsinline="playsinline"
-  />
+  <div>
+    <select name="cameras">
+      <option v-for="camera in cameras" :key="camera.deviceId" :value="camera.deviceId">{{ camera.deviceId }}</option>
+    </select>
+    <video
+      ref="video"
+      :width="width"
+      :height="height"
+      :src="source"
+      :autoplay="autoplay"
+      :playsinline="playsinline"
+    />
+  </div>
 </template>
 
 <script>
@@ -134,6 +139,7 @@ export default {
           }
         })
         .then(() => {
+          console.log("Cameras detected", this.cameras);
           if (!this.camerasListEmitted) {
             if (this.selectFirstDevice && this.cameras.length > 0) {
               this.deviceId = this.cameras[0].deviceId;
