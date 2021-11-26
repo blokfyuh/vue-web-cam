@@ -1,7 +1,6 @@
 <template>
   <div>
     <select name="cameras" v-model="selectedCamera" @change="loadCamera(selectedCamera.deviceId)">
-      <option value="zoubi">ZOUBI</option>
       <option v-for="camera in cameras" :key="camera.deviceId" :value="camera">{{ camera.label }}</option>
     </select>
     <video
