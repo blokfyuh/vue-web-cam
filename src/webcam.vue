@@ -1,8 +1,8 @@
 <template>
   <div>
-    <select name="cameras" @change="loadCamera(camera.deviceId)">
+    <select name="cameras" v-model="selectedCamera" @change="loadCamera(selectedCamera.deviceId)">
       <option value="zoubi">ZOUBI</option>
-      <option v-for="camera in cameras" :key="camera.deviceId" :value="camera.deviceId">{{ camera.label }}</option>
+      <option v-for="camera in cameras" :key="camera.deviceId" :value="camera">{{ camera.label }}</option>
     </select>
     <video
       ref="video"
@@ -61,6 +61,7 @@ export default {
       canvas: null,
       camerasListEmitted: false,
       cameras: [],
+      selectedCamera: null,
       deviceId: null,
     };
   },
