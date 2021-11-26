@@ -165,6 +165,7 @@ export default {
      * load the stream to the
      */
     loadSrcStream(stream) {
+      console.log("loadSrcStream", stream, this.$refs.video);
       if ("srcObject" in this.$refs.video) {
         // new browsers api
         this.$refs.video.srcObject = stream;
