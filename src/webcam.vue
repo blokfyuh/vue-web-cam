@@ -5,8 +5,6 @@
     </select>
     <video
       ref="video"
-      width="100%"
-      height="100%"
       :src="source"
       :autoplay="autoplay"
       :playsinline="playsinline"
