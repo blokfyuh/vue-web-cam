@@ -1,8 +1,8 @@
 <template>
-<!--  <div>-->
-<!--    <select name="cameras">-->
-<!--      <option v-for="camera in cameras" :key="camera.deviceId" :value="camera.deviceId">{{ camera.label }}</option>-->
-<!--    </select>-->
+  <div>
+    <select name="cameras">
+      <option v-for="camera in cameras" :key="camera.deviceId" :value="camera.deviceId">{{ camera.label }}</option>
+    </select>
     <video
       ref="video"
       :width="width"
@@ -11,7 +11,7 @@
       :autoplay="autoplay"
       :playsinline="playsinline"
     />
-<!--  </div>-->
+  </div>
 </template>
 
 <script>
@@ -25,7 +25,7 @@ export default {
     },
     height: {
       type: [Number, String],
-      default: 500
+      default: "100%"
     },
     autoplay: {
       type: Boolean,
@@ -45,7 +45,7 @@ export default {
     // },
     playsinline: {
       type: Boolean,
-      default: true
+      default: false
     },
     resolution: {
       type: Object,
